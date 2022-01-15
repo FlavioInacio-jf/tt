@@ -1,0 +1,31 @@
+.nav-tabs {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid var(--border-color);
+
+  button {
+    font-family: 'Poppins', sans-serif;
+    color: var(--grey-dark);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+
+    &.active {
+      font-weight: normal;
+      color: var(--secondary-color);
+      transition: color .3s;
+
+      background: var(--tertiary-color);
+      border-radius: 0.5rem;
+    }
+
+    &:not(.active):hover {
+      color: var(--grey-medium);
+    }
+  }
+
+
+}

@@ -1,0 +1,146 @@
+.containerMessages {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  height: 100vh;
+  background-color: var(--secondary-color);
+}
+
+.headerMessages {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 5.7rem;
+
+  border-bottom: 0.1rem solid var(--primary-color);
+
+  .messagesActions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: var(--grey-medium);
+      font-size: 1.6rem;
+    }
+  }
+}
+
+
+.footer {
+  align-self: flex-end;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 2rem;
+
+  z-index: 900;
+  border-radius: 0.5rem;
+
+  form {
+    display: flex;
+    justify-content: flex-start;
+
+    gap: 1rem;
+    width: 100%;
+
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+
+    padding: 0 2rem;
+
+ }
+
+
+  .formGroup {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0;
+
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 2rem;
+      color: var(--text-color-light);
+      height: 100%;
+    }
+
+    input {
+
+      width: 100%;
+      padding: 1.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+      border-radius: 0;
+      color: var(--text-color-light);
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    &:nth-child(2) {
+      width: fit-content;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--text-color-light);
+      height: 100%;
+
+      &:hover {
+        filter: none;
+      }
+    }
+
+    &:nth-child(2) {
+      button {
+        padding: 0;
+        height: 100%;
+      }
+
+    }
+  }
+}
+
+.messages {
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  padding-bottom: 4rem;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  scroll-behavior: smooth;
+}

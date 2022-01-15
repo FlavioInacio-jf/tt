@@ -1,0 +1,8 @@
+.footer {
+  grid-column: span 2;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.6rem;
+  padding: 1.6rem 0;
+}

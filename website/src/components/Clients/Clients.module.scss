@@ -1,0 +1,130 @@
+.containerClientes {
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+
+.clientsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 2rem;
+  border-bottom: 0.1rem solid var(--secondary-color);
+  background-color: var(--primary-color);
+
+  width: 100%;
+  height: 5.7rem;
+
+  .btnHeader {
+    font-size: 1.6rem;
+    color: var(--grey-medium);
+    padding: 0;
+
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+
+ 
+}
+
+.clientsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  height: 100%;
+
+  padding-bottom: 7rem;
+
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  scroll-behavior: smooth;
+}
+
+.formClients {
+  padding: 0 2rem;
+  display: grid;
+
+  gap: 1.6rem;
+
+  .formRadios {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 1rem;
+
+    input[type='radio'] {
+      display: none;
+
+      &:not(:disabled) ~ label {
+        cursor: pointer;
+      }
+
+      &:disabled ~ label {
+        border: 0.1rem solid var(--border-color);
+        cursor: not-allowed;
+      }
+
+      &:checked + label {
+        border-color: var(--tertiary-color);
+        color: var(--tertiary-color);
+
+        .icon {
+          color: var(--tertiary-color);
+        }
+      }
+    }
+  }
+
+  .formRadiosTitle {
+    width: 100%;
+    text-align: left;
+
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    font-weight: 400;
+    color: var(--grey-dark);
+  }
+
+  .radio {
+    max-width: auto;
+    height: fit-content;
+    display: block;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.5rem;
+
+    position: relative;
+
+    padding: 0.5rem;
+    transition: all 0.3s;
+
+    text-align: center;
+    .icon {
+      transition: all 0.3s;
+
+      font-size: 3rem;
+      color: var(--grey-dark);
+    }
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .clientsContent {
+    flex-direction: row;
+
+    width: 100%;
+    overflow-x: auto;
+  }
+}

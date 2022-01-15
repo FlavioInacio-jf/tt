@@ -1,0 +1,133 @@
+   function handleChangeChoice(event: ChangeEvent<HTMLInputElement>) {
+    let valueChoice = Number(event.target.value)
+
+  }
+
+ <div className={isShowCreateTopic ? "client-topics show" : "client-topics" }>
+   <p>Clique no botão abaixo para criar o primeiro topico</p>
+   <button className='button-more' onClick={()=> handleShowModal(true)}>
+     <BsPlusLg />
+   </button>
+ </div>
+
+ <Modal title={`Connection: ${client.name}`} show={isShowModal}>
+   <h4 className='form-title'>Which would like to create?</h4>
+   <div className='wrap-radios'>
+     <div className='form-group-radio'>
+       <input type="radio" name='radio' id='subscribe-radio' value="1" onChange={(event)=> handleChangeChoice(event)} />
+       <label htmlFor='subscribe-radio'>
+         <BsFillCloudDownloadFill className='icon' />
+         Subscribe
+       </label>
+     </div>
+     <div className='form-group-radio'>
+       <input type="radio" name='radio' id='publish-radio' value="2" onChange={(event)=> handleChangeChoice(event)} />
+       <label htmlFor='publish-radio'>
+         <BsFillCloudUploadFill className='icon' />
+         Publish
+       </label>
+     </div>
+   </div>
+
+   {choice === 1 ?
+   <>
+     <form autoComplete='off'>
+       <div className="form-group">
+         <label for-id="topic" className='sr-only'>Topic</label>
+         <input type="text" name="topic" id="topic" placeholder="Topic" required />
+       </div>
+
+       <div className="form-group">
+         <label for-id="oos" className='sr-only'>Oos</label>
+         <select name='oos'>
+           <option value={1}>1</option>
+           <option value={2}>2</option>
+           <option value={3}>3</option>
+         </select>
+       </div>
+
+
+       <footer>
+         <button className="btn btn-outline-tertiary" type="button" onClick={()=> handleShowModal(false)}>
+           <BsXLg />Cancel
+         </button>
+         <button className="btn btn-tertiary" type="submit">
+           <BsCheckLg /> Save
+         </button>
+       </footer>
+     </form>
+
+   </>
+
+   :
+
+   <>
+     <form autoComplete='off'>
+       <div className="form-group">
+         <label for-id="topic" className='sr-only'>Topic</label>
+         <input type="text" name="topic" id="topic" placeholder="topic" required />
+       </div>
+
+       <div className="form-group">
+         <label for-id="oos" className='sr-only'>Oos</label>
+         <select name='oos'>
+           <option value={1}>1</option>
+           <option value={2}>2</option>
+           <option value={3}>3</option>
+         </select>
+       </div>
+
+       <footer>
+         <button className="btn btn-outline-tertiary" type="button" onClick={()=> handleShowModal(false)}>
+           <BsXLg />Cancel
+         </button>
+         <button className="btn btn-tertiary" type="submit">
+           <BsCheckLg /> Save
+         </button>
+       </footer>
+     </form>
+   </>
+   }
+ </Modal>
+
+ .form-radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+ .client-topics {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 0.1rem solid var(--border-color);
+    display: none;
+
+    &.show{
+      display: block;
+    }
+
+    button {
+      font-size: 1.6rem;
+      color: var(--grey-light);
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1.3rem;
+      line-height: 1.9rem;
+      color: var(--grey-dark);
+    }
+  }
+
+
+
+
+type MessageType = {
+  id: number;
+  message: string;
+  hour: string;
+}

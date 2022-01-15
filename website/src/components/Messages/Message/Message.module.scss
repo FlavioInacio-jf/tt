@@ -1,0 +1,43 @@
+.containerMessage {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  header {
+    word-wrap: break-word;
+    word-break: break-all;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    text-align: right;
+    padding: 1rem;
+
+    color: var(--text-color-light);
+    border-radius: 1rem 0 1rem 1rem;
+
+
+    background: rgba(74, 173, 132, 0.3);
+    box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+    border: 0.1rem solid rgba(74, 173, 132, 0.6);
+
+  }
+
+  footer {
+    margin-top: 1rem;
+
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2rem;
+    color: var(--grey-dark);
+    span {
+      text-align: right;
+      font-family: 'Open sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text-color-light);
+    }
+  }
+}

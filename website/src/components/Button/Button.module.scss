@@ -1,0 +1,19 @@
+button {
+  font-family: 'Open sans', sans-serif;
+  font-weight: normal;
+  transition: all 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  &:not(:disabled):hover {
+    filter: brightness(0.8);
+  }
+  &:disabled {
+    clip-path: circle();
+    opacity: 0.65;
+  }
+}

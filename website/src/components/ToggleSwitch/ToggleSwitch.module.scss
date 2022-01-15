@@ -1,0 +1,55 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      background-color: var(--grey-light);
+
+      &::before {
+        -webkit-transform: translateX(2.4rem);
+        -ms-transform: translateX(2.4rem);
+        transform: translateX(2.4rem);
+      }
+    }
+    &:focus + .slider {
+      box-shadow: 0 0 .1rem var(--tertiary-color);
+    }
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--grey-dark);
+
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 3.4rem;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1.7rem;
+      width: 1.7rem;
+      left: 0rem;
+      bottom: 0.1rem;
+      background-color: var(--text-color-light);
+      box-shadow: #000 15%;
+      border-radius: 50%;
+      transition: all .3s;
+    }
+
+
+  }
+}
